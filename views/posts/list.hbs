@@ -1,13 +1,15 @@
 {{#each lists as |list|}}
 {{#with list}}
-<div class="card mb-1">
-  <h5 class="card-header"><a method="get" href="/posts/{{id}}">{{title}}</a></h5>
-  
-     <img  method="get" src="{{image}}" class = "card-img-top"alt="Image related">
-     <p class="card-text" method="get">{{text}}</p>
-     <form action="/posts/{{ id }}/edit" method= "posts"><button type="submit" class="btn btn-warning btn-sm">Edit</form>
-     <form action="/posts/{{ id }}/delete" method= "posts"><button type="submit" class="btn btn-danger btn-sm">Delete</form>
-</div>
-</div>
+<div class="card text-center">
+  <div class="card-header">
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><a method="get" href="/posts/{{id}}">{{ title }}</a></h5>
+    <p class="card-text" method="get">{{ tex t}}</p>
+    <img  method="get" src="{{ image }}" class = "card-img-top"alt="Image related">
+    <form action="/posts/{{ id }}/edit" method= "get"><button type="submit" class="btn btn-warning btn-sm">Edit</form>
+     <form action="/posts/{{ id }}/delete" method= "post"><button type="submit" class="btn btn-danger btn-sm">Delete</form>
+  </div>
+  </div>
 {{/with}}
 {{/each}}

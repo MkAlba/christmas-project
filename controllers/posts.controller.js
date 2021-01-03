@@ -41,9 +41,22 @@ module.exports.details = async (req, res, next) => {
 
 module.exports.delete = async (req, res, next) => {
   const { id } = req.params;
-  console.log(req. body)
   await Post.findByIdAndDelete(id);
 
   res.redirect('/posts/list')
+}
 
+module.exports.edit =  async (req, res, next) => {
+  const { id } = req.params;
+  const { title, image, text } = req.body;
+  console.log(req.body)
+  const postEdited = {
+      title: title,
+      image: image,
+      text: text
+  }
+  await Post.findByIdAndUpdate(id, postEdited);
+ 
+
+  res.redirect('/posts/list')
 }
