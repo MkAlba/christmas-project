@@ -1,0 +1,15 @@
+<h2>NEW POST</h2>
+<form class = "mx-sm-3 mb-2" action="/posts/create" method="POST">
+ <div class="form-group ">
+    <label for="text">Title</label>
+    <input type="text" class="form-control mb-3" id="exampleInput" name="title" placeholder="Enter Title">
+  </div>
+<div class="input-group mb-3">
+  <input type="file" class="form-control" name ="image" id="inputGroupFile02">
+  <label class="input-group-text" for="inputGroupFile02">Upload</label>
+</div>
+    <div class="form-group ">
+    <textarea class="form-control mb-3" rows = "8" for="typeText" name = "text" placeholder="Text" ></textarea>    
+  </div>
+<button class="btn btn-primary  " type="submit">Submit POST</button>
+</form>

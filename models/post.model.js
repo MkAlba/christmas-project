@@ -1,9 +1,11 @@
 class Post {
     static posts = [];
+  
 
     static find() {
         return Promise.resolve(this.posts);
     }
+   
 
     static create(post) {
         if (
@@ -61,6 +63,7 @@ class Post {
 
         return Promise.resolve(targetPost);
     }
+
 }
 
 module.exports = Post;
