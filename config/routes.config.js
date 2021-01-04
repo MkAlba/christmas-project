@@ -9,5 +9,6 @@ router.post('/posts/create', posts.new);
 router.get('/posts/:id', posts.details)
 router.post('/posts/:id/delete', posts.delete);
 router.get('/posts/:id/edit', posts.edit);
+router.post('/posts/:id/update', posts.update);
 
 module.exports = router;

@@ -1,5 +1,15 @@
+{{#if post}}
 {{#with post}}
 <h1>{{title}}</h1>
 <img src="{{image}}" alt="">
 <p>{{text}}</p>
 {{/with}}
+{{/if}}
+
+{{#if postEdited}}
+{{#with postEdited}}
+<h1>{{title}}</h1>
+<img src="{{image}}" alt="">
+<p>{{text}}</p>
+{{/with}}
+{{/if}}

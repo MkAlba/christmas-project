@@ -5,10 +5,10 @@
   </div>
   <div class="card-body">
     <h5 class="card-title"><a method="get" href="/posts/{{id}}">{{ title }}</a></h5>
-    <p class="card-text" method="get">{{ tex t}}</p>
+    <p class="card-text" method="get">{{text}}</p>
     <img  method="get" src="{{ image }}" class = "card-img-top"alt="Image related">
-    <form action="/posts/{{ id }}/edit" method= "get"><button type="submit" class="btn btn-warning btn-sm">Edit</form>
-     <form action="/posts/{{ id }}/delete" method= "post"><button type="submit" class="btn btn-danger btn-sm">Delete</form>
+    <form action="/posts/{{ id }}/edit" value="{{title}} {{text}}" method= "GET"><button type="submit" class="btn btn-warning btn-sm">Edit</form>
+     <form action="/posts/{{ id }}/delete" method= "POST"><button type="submit" class="btn btn-danger btn-sm">Delete</form>
   </div>
   </div>
 {{/with}}

@@ -37,7 +37,7 @@ module.exports.details = async (req, res, next) => {
   res.render('posts/details', {
     post: post
   });
-}
+} 
 
 module.exports.delete = async (req, res, next) => {
   const { id } = req.params;
@@ -46,17 +46,27 @@ module.exports.delete = async (req, res, next) => {
   res.redirect('/posts/list')
 }
 
-module.exports.edit =  async (req, res, next) => {
+module.exports.edit = async  (req, res, next) => {
+  const { id } = req.params;
+  const editpost = await  Post.findById(id)
+ 
+  res.render('posts/edit', {
+    editpost : editpost
+  })
+}
+
+module.exports.update = async (req, res, next) => {
+  
   const { id } = req.params;
   const { title, image, text } = req.body;
-  console.log(req.body)
   const postEdited = {
       title: title,
       image: image,
       text: text
   }
-  await Post.findByIdAndUpdate(id, postEdited);
- 
+await Post.findByIdAndUpdate(id, postEdited);
 
-  res.redirect('/posts/list')
+res.render('posts/details', {
+    postEdited: postEdited
+  })
 }
