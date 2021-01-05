@@ -1,15 +1,21 @@
+<div class="text-center" class="container-fluid"> 
 {{#if post}}
 {{#with post}}
-<h1>{{title}}</h1>
-<img src="{{image}}" alt="">
-<p>{{text}}</p>
+
+<h2 class="alert alert-primary" >{{title}}</h2>
+<img src="{{image}}" alt="Image related">
+<p class="alert alert-secondary">{{text}}</p>
 {{/with}}
 {{/if}}
 
 {{#if postEdited}}
 {{#with postEdited}}
-<h1>{{title}}</h1>
-<img src="{{image}}" alt="">
-<p>{{text}}</p>
+
+<h2 class="alert alert-danger">{{title}}</h2>
+<img src="{{image}}" alt="Image related">
+<p class="alert alert-warning">{{text}}</p>
 {{/with}}
 {{/if}}
+
+
+</div>
