@@ -16,6 +16,7 @@ module.exports.new = async (req, res, next) => {
     title: title,
     text: text,
     image: image,
+    
   }
   if (!text || !title) {
     const errors = {};
